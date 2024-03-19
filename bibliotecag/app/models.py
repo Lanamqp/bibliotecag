@@ -56,8 +56,8 @@ class Autor(models.Model):
 
 class Livro(models.Model):
     nome = models.CharField(max_length=100)
-    genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
-    autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
+    Genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
+    autor =models.ForeignKey(Autor, on_delete=models.CASCADE)
     editora = models.ForeignKey(Editora, on_delete=models.CASCADE)
     preco = models.IntegerField()
     datapublicacao = models.DateField()
@@ -81,6 +81,4 @@ class Emprestimo(models.Model):
 
     def __str__(self):
         return self.livro
-    
-
         
